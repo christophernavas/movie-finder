@@ -43,7 +43,7 @@ const useMovieQuery = (search) => {
   const apiKey = process.env.API_KEY;
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data, error, isLoading } = useSWR(
-    search ? `http://www.omdbapi.com/?apikey=${apiKey}&s=${search}` : null,
+    search ? `https://www.omdbapi.com/?apikey=${apiKey}&s=${search}` : null,
     fetcher
   );
 
